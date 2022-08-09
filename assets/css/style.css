@@ -1,0 +1,38 @@
+body {
+    background-image: url(https://images.unsplash.com/photo-1592210454359-9043f067919b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8d2VhdGhlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-family:sans-serif ;
+    color: #425364;
+    line-height: 1.5;
+    font-size: 16px;
+}
+.search-column{
+    background-color: #D3D3D3;
+}
+.list-group-item {
+    line-height: 0.5;
+    border: none; 
+}
+/*  */
+.card-body{
+    flex: auto;
+}
+
+span.severe{
+    padding: 3px;
+    background-color:red;
+    color:white;
+}
+
+span.moderate{
+    padding: 3px;
+    background-color: yellow;
+}
+
+span.favorable{
+    padding: 3px;
+    background-color: green;
+    color:white;
+}
