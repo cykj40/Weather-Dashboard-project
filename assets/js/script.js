@@ -129,12 +129,13 @@ var get5Day = function(city){
     .then(function(response){
         response.json().then(function(data){
             display5Day(data);
+            
         });
     });
 };
 
 var display5Day = function(weather){
-    forecastContainer.textContent=""
+    forecastContainer.textContent= ""
     forecastTitle.textContent = "5-day Forecast:";
 
     var forecast = weather.list;
@@ -147,7 +148,7 @@ var display5Day = function(weather){
         // create date header
         var forecastDate=document.createElement("h5")
         forecastDate.textContent= moment.unix(dailyForecast.dt).format("MMM D, YYYY");
-        forecasrDate.classList = "card-header text-center"
+        forecastDate.classList = "card-header text-center"
         forecastData.appendChild(forecastDate);
 
         // create image
@@ -183,7 +184,7 @@ var priorSearch = function(priorSearch){
     priorSearchData.setAttribute("data-city",pastsearch)
     priorSearchData.setAttribute("type", "submit");
 
-    priorSearchButtonData.prepend(priorSearchData);
+    pastSearchButton.prepend(priorSearchData);
 
 }
  var priorSearchHandler = function(event){
@@ -193,7 +194,10 @@ var priorSearch = function(priorSearch){
         get5Day(city);
     }
  }
+
+ 
  
  cityForm.addEventListener("submit", submitForm);
  priorSearchButtonData.addEventListener("click", priorSearchHandler);
+
 
