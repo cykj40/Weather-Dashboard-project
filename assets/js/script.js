@@ -92,7 +92,7 @@ var displayWeather = function (weather, searchCity) {
 // fetching the uv data
 var getUvIndex = function (lat, lon) {
     var apiKey = "30ba22cf3476c2ad903f09a213b675ab"
-    var apiURL = `https://api.openweathermap.org/data/2.5/uvi?appid=${apiKey}&lat${lat}&lon=${lon}`
+    var apiURL = `https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/3.0/uvi?lat=${lat}&lon=${lon}&appid=${apiKey}`
     fetch(apiURL)
         .then(function (response) {
             response.json().then(function (data) {
