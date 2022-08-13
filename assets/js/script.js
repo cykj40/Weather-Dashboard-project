@@ -45,7 +45,7 @@ var getCityWeather = function(city) {
 
 
 
-// clears previous search
+// displays weather
 var displayWeather = function (weather, searchCity) {
     weatherContainer.textContent = "";
     citySearchInput.textContent = searchCity;
@@ -122,6 +122,7 @@ var displayUvIndex = function (index) {
 
     weatherContainer.appendChild(uvIndexData);
 }
+// get 5 day weather forecast from open weather map api
 var get5Day = function(city){
     var apiKey= "30ba22cf3476c2ad903f09a213b675ab"
     var apiURL=`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${apiKey}`
