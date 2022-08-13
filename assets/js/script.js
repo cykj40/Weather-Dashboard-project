@@ -92,8 +92,9 @@ var displayWeather = function (weather, searchCity) {
 // fetching the uv data
 var getUvIndex = function (lat, lon) {
     var apiKey = "30ba22cf3476c2ad903f09a213b675ab"
-    var apiURL = `https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/3.0/uvi?lat=${lat}&lon=${lon}&appid=${apiKey}`
-    fetch(apiURL)
+    var apiURL= `https://api.openweathermap.org/data/2.5/uvi?appid=${apiKey}&lat=${lat}&lon=${lon}`
+    
+   fetch(apiURL)
         .then(function (response) {
             response.json().then(function (data) {
                 console.log(data)
@@ -112,7 +113,7 @@ var displayUvIndex = function (index) {
 
     if (index.value <=2) {
         uvIndexValue.classList = "favorable"
-    } else if (index.value >2 && index.value <= 8) {
+    }else if(index.value >2 && index.value <=8) {
         uvIndexValue.classList = "moderate"
     }else if(index.value >8){
         uvIndexValue.classList= "Severe"
@@ -171,7 +172,7 @@ var display5Day = function(weather){
         forecastHumData.classList = "card-body text-center";
         forecastHumData.textContent = dailyForecast.main.humidity + " %";
       
-        forecastContainerData.appendChild(forecastData);
+        forecastContainer.appendChild(forecastData);
 
 
     }
@@ -198,6 +199,6 @@ var priorSearch = function(priorSearch){
  
  
  cityForm.addEventListener("submit", submitForm);
- priorSearchButtonData.addEventListener("click", priorSearchHandler);
+ pastSearchButton.addEventListener("click", priorSearchHandler);
 
 
