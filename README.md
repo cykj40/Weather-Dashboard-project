@@ -27,4 +27,4 @@ SO THAT I can plan a trip accordingly
 Enter the city, the weather and 5 day forecast will appear.
 ```
 
-click the lightning bolt [⚡](https://cykj40.github.io/Weather-Dashboard-project/) to see the Weather Dashboard in action!
+click the thermometer [🌡](https://cykj40.github.io/Weather-Dashboard-project/) to check the Weather in your city.
