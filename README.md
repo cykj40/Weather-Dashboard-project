@@ -8,6 +8,16 @@ I WANT to see the weather outlook for multiple cities
 SO THAT I can plan a trip accordingly
 ```
 
+## Table of Contents
+-[User Story:](#user-story)
+
+-[Technologies Used:](#technologies-used)
+
+-[Screenshot of The Weather Dashboard:](#screenshot-of-the-weather-dashboard)
+
+-[Deployed Application:](#deployed-application)
+
+
 ## Technologies Used 
 
 ```md
@@ -26,5 +36,5 @@ SO THAT I can plan a trip accordingly
 ```md
 Enter the city, the weather and 5 day forecast will appear.
 ```
-
+## Deployed Application
 click the thermometer [🌡](https://cykj40.github.io/Weather-Dashboard-project/) to check the Weather in your city.
