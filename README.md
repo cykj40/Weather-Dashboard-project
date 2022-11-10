@@ -9,29 +9,30 @@ SO THAT I can plan a trip accordingly
 ```
 
 ## Table of Contents
--[User Story:](#user-story)
+-[User Story](#user-story)
 
--[Technologies Used:](#technologies-used)
+-[Technologies Used](#technologies-used)
 
--[Screenshot of The Weather Dashboard:](#screenshot-of-the-weather-dashboard)
+-[Screenshot of The Weather Dashboard](#screenshot-of-the-weather-dashboard)
 
--[Deployed Application:](#deployed-application)
+-[Deployed Application](#deployed-application)
 
 
 ## Technologies Used 
 
 ```md
-*HTML 
-*CSS
-*Javascript
-*Open weather map API
-*Bootstrap
-*moments JS
+* HTML 
+* CSS
+* Javascript
+* Open weather map API
+* Bootstrap
+* moments JS
 ```
 
 ## screenshot of the Weather Dashboard
 
-![Screenshot (23)](https://user-images.githubusercontent.com/102045473/184535466-0a6fc0cf-08b3-4087-a117-550f402e6a75.png)
+![weatherappnew](https://user-images.githubusercontent.com/102045473/201222111-8690a162-f9c5-4026-8795-76e4d4ab1761.png)
+
 
 ```md
 Enter the city, the weather and 5 day forecast will appear.
