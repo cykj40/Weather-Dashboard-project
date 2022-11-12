@@ -47,7 +47,7 @@ THEN I am again presented with current and future conditions for that city
 
  
   ## Installation
-  To use this project to lookup weather all you have to do is click on this link.
+  To use this project to lookup weather all you have to do is click on this <a href="https://cykj40.github.io/Weather-Dashboard-project/">link</a>.
 
   ## License
 ![badge](https://img.shields.io/badge/license-MIT--brightgreen)
