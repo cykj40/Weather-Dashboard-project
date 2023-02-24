@@ -1,24 +1,62 @@
+var searchHistory = [];
+
 function addResult(){
     inputCity = document.getElementById("myInput").value;
-    historyList = getInfo();
-    var searchCity =$("<div>")
+    var searchCity = $("<div>");
     searchCity.attr("id", "inputCity");
     searchCity.text(inputCity);
-    searchCity.addClass("h4")
+    searchCity.addClass("h4");
 
-    if (historyList.includes(inputCity) === false){
-   $(".history").append(searchCity);
+    if (!searchHistory.includes(inputCity)) {
+        searchHistory.push(inputCity);
+        $(".history").append(searchCity);
     }
+
     $(".subtitle").attr("style", "display: inline");
     addInfo(inputCity);
-};
+}
+
+// function addResult(){
+//     inputCity = document.getElementById("myInput").value;
+//     historyList = getInfo();
+//     var searchCity =$("<div>")
+//     searchCity.attr("id", "inputCity");
+//     searchCity.text(inputCity);
+//     searchCity.addClass("h4")
+
+//     if (historyList.includes(inputCity) === false){
+//    $(".history").append(searchCity);
+//     }
+//     $(".subtitle").attr("style", "display: inline");
+//     addInfo(inputCity);
+// };
 // add event listener to search history item
-$(".history").on("click", function(event){
+// $(".history").on("click", function(event){
+//     event.preventDefault(); 
+//     $(".subtitle").attr("style", "display: inline");
+//     document.getElementById("myInput").value = event.target.id;
+//     getResult();
+// });
+$(".history").on("click", "div", function(event) {
     event.preventDefault(); 
     $(".subtitle").attr("style", "display: inline");
-    document.getElementById("myInput").value = event.target.id;
-    getResult();
+    var city = $(this).text();
+    document.getElementById("myInput").value = city;
+    addInfo(city);
 });
+localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
+
+$(document).ready(function() {
+    searchHistory = JSON.parse(localStorage.getItem("searchHistory")) || [];
+    for (var i = 0; i < searchHistory.length; i++) {
+        var searchCity = $("<div>");
+        searchCity.attr("id", "inputCity");
+        searchCity.text(searchHistory[i]);
+        searchCity.addClass("h4");
+        $(".history").append(searchCity);
+    }
+});
+
 // add event listener to search button
 document.getElementById("searchBtn").addEventListener("click", addResult );
 document.getElementById("searchBtn").addEventListener("click", getResult );
